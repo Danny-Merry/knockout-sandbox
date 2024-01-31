@@ -1,0 +1,22 @@
+{
+  "name": "knockout-playground",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "@enable-ux/eds-common": "^1.13.5",
+    "@types/knockout": "^3.4.77",
+    "jquery": "^3.7.1",
+    "knockout": "^3.5.1",
+    "sass": "^1.70.0"
+  }
+}

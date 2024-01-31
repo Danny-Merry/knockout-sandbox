@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="src/style.scss">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+
+    <div style="width: 500px; margin: auto; margin-top: 200px; padding: 40px;">
+      <eds-auto-fill-search
+        data-bind="
+            eds-init: initAutofillSearch.bind($data),
+            event: {
+              'eds-fill-search-term': searchItems,
+              'eds-fill-search-item-selected': selectItem
+            }"
+        showviewmore="false"
+        multiselect="true">
+      </eds-auto-fill-search>
+
+      <div data-bind="if: isLoading" style="margin: 180px auto 0; height: 80px; width: fit-content;">
+        <div class="eds-loader eds-loader--small"></div>
+      </div>
+
+      
+    </div>
+    <div style="width: 500px; margin: auto;">
+      <div data-bind="foreach: selectedOptions" style="display: flex; gap: 16px;">
+        <span data-bind="text: name" class="eds-pill"></span>
+      </div>
+    </div>
+
+
+
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
